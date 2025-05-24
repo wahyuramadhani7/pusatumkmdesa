@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk - Pusat UMKM Desa Geneng</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar sticky">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMjAiIGZpbGw9IiMzNDk1ZjciLz4KPHN2ZyB4PSI4IiB5PSI4IiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPgo8cGF0aCBkPSJNMTIgMkw2IDlIMTBWMjJIMTRWOUgxOEwxMiAyWiIvPgo8L3N2Zz4KPC9zdmc+" alt="Logo UMKM Desa Geneng" loading="lazy">
+                <span>Pusat UMKM Desa Geneng</span>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html">Beranda</a>
+                <a href="#products" class="active">Produk</a>
+                <a href="../index.html#partners">Mitra</a>
+                <a href="../index.html#about">Tentang</a>
+                <a href="../index.html#contact">Kontak</a>
+            </div>
+            <div class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Products Header -->
+    <section class="products-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">Beranda</a>
+                <span><i class="fas fa-chevron-right"></i></span>
+                <span>Produk</span>
+            </div>
+            <h1>Semua Produk Kami</h1>
+            <p>Temukan berbagai produk unggulan dari UMKM lokal Desa Geneng</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-controls">
+                <div class="filter-group">
+                    <label for="categoryFilter">Kategori:</label>
+                    <select id="categoryFilter" aria-label="Pilih kategori produk">
+                        <option value="all">Semua Kategori</option>
+                        <option value="makanan">Makanan & Minuman</option>
+                        <option value="kerajinan">Kerajinan Tangan</option>
+                        <option value="pertanian">Produk Pertanian</option>
+                        <option value="fashion">Fashion & Tekstil</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="priceFilter">Harga:</label>
+                    <select id="priceFilter" aria-label="Pilih rentang harga">
+                        <option value="all">Semua Harga</option>
+                        <option value="0-25000">Di bawah Rp 25.000</option>
+                        <option value="25000-50000">Rp 25.000 - Rp 50.000</option>
+                        <option value="50000-100000">Rp 50.000 - Rp 100.000</option>
+                        <option value="100000+">Di atas Rp 100.000</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="sortFilter">Urutkan:</label>
+                    <select id="sortFilter" aria-label="Pilih urutan produk">
+                        <option value="name">Nama A-Z</option>
+                        <option value="price-low">Harga Terendah</option>
+                        <option value="price-high">Harga Tertinggi</option>
+                        <option value="rating">Rating Tertinggi</option>
+                    </select>
+                </div>
+                <div class="search-group">
+                    <input type="text" id="searchInput" placeholder="Cari produk..." aria-label="Cari produk">
+                    <i class="fas fa-search"></i>
+                </div>
+                <button class="btn-reset" onclick="resetFilters()">Reset Filter</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-grid-section">
+        <div class="container">
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+            <div class="load-more">
+                <button id="loadMoreBtn" class="btn-primary">Muat Lebih Banyak</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>Pusat UMKM Desa Geneng</h3>
+                    <p>Mendukung ekonomi kreatif dan pemberdayaan UMKM lokal untuk kemajuan bersama.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Beranda</a></li>
+                        <li><a href="#products">Produk</a></li>
+                        <li><a href="../index.html#partners">Mitra</a></li>
+                        <li><a href="../index.html#about">Tentang</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section stores">
+                    <h4>Toko Mitra</h4>
+                    <ul>
+                        <li><a href="#" onclick="visitStore('saribumi')">Toko Sari Bumi</a></li>
+                        <li><a href="#" onclick="visitStore('kriyageneng')">Kriya Geneng</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +62 812-3456-7890</li>
+                        <li><i class="fas fa-envelope"></i> info@pusatumkmgeneng.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Desa Geneng, Ngawi</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Pusat UMKM Desa Geneng. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/slider.js"></script>
+</body>
+</html>
